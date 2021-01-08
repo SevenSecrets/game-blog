@@ -1,0 +1,19 @@
+{
+  "name": "game-blog",
+  "version": "1.0.0",
+  "description": "A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SevenSecrets/game-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SevenSecrets/game-blog/issues"
+  },
+  "homepage": "https://github.com/SevenSecrets/game-blog#readme"
+}

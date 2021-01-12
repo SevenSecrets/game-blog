@@ -4,7 +4,8 @@
   "description": "A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/*.test.js --exit",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,10 @@
   },
   "homepage": "https://github.com/SevenSecrets/game-blog#readme",
   "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "express": "^4.17.1",
+    "mocha": "^8.2.1",
     "morgan": "^1.10.0",
     "pug": "^3.0.0"
   }

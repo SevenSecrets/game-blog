@@ -1,15 +1,8 @@
-const { doesNotMatch } = require('assert');
-const assert = require('assert');
-const chai = require("chai");
-const chaiHttp = require("chai-http");
-const expect = chai.expect;
-const app = require('../app');
+import { expect, server } from './setup.js';
 
-chai.use(chaiHttp);
-
-describe('get request', () => {
-	it('returns 200 OK for /', (done) =>{
-		chai.request(app)
+describe('index requests', () => {
+	it('returns 200 OK for /', (done) => {
+		server
 			.get('/')
 			.end((err, res) => {
 				expect(res).to.have.status(200);

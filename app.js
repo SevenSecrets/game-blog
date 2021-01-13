@@ -22,7 +22,8 @@ const app = express();
 const port = 3000;
 const db = mongoose.connection;
 
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
+app.use(logger('combined'));
 
 app.get('/', (req, res) => {
 	res.render('index', { title: "article title", article: { title: "article title", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }});

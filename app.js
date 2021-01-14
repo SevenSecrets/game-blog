@@ -1,8 +1,8 @@
-import express from 'express';
-import logger from 'morgan';
-import dotenv from 'dotenv';
-import mongoose from 'mongoose';
-import article from './models/article.js';
+const express = require('express');
+const logger = require('morgan');
+const dotenv = require('dotenv');
+const mongoose = require('mongoose');
+const article = require('./models/article.js');
 
 dotenv.config();
 
@@ -33,4 +33,4 @@ app.listen(port, () => {
 	console.log(`Listening at port ${port}`);
 });
 
-export default app;
+module.exports = app;

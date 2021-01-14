@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
@@ -9,4 +9,4 @@ const article = new Schema({
 	date: Date
 });
 
-export default article;
+module.exports = article;

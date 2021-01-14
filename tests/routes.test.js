@@ -1,12 +1,11 @@
-import { expect, server } from './setup.js';
+const request = require('supertest');
+const app = require('../app');
 
-describe('index requests', () => {
-	it('returns 200 OK for /', (done) => {
-		server
-			.get('/')
-			.end((err, res) => {
-				expect(res).to.have.status(200);
-				done();
-			});
+describe("index requests", () => {
+	describe("get requests", () => {
+		it("responds 200", (done) => {
+			request(app).get('/')
+				.expect(200, done);
+		})
 	});
 });

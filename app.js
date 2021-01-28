@@ -29,6 +29,15 @@ app.get('/', (req, res) => {
 	res.render('index', { title: "article title", article: { title: "article title", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }});
 });
 
+app.get('/articles', (req, res) => {
+	Article.find({}, (err, dbres) => {
+		if (err) {
+			res.send(err);
+		}
+		res.send(dbres);
+	})
+})
+
 app.listen(port, () => {
 	console.log(`Listening at port ${port}`);
 });

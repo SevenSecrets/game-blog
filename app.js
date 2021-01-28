@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 			res.send(err);
 		}
 		res.render('index', { articles: queryres });	
-	})
+	});
 });
 
 app.get('/articles', (req, res) => {
@@ -40,8 +40,8 @@ app.get('/articles', (req, res) => {
 			res.send(err);
 		}
 		res.send(queryres);
-	})
-})
+	});
+});
 
 app.listen(port, () => {
 	console.log(`Listening at port ${port}`);

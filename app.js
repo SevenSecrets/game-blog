@@ -26,15 +26,23 @@ app.set('view engine', 'pug');
 app.use(logger('combined'));
 
 app.get('/', (req, res) => {
-	res.render('index', { title: "article title", article: { title: "article title", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." }});
-});
-
-app.get('/articles', (req, res) => {
-	Article.find({}, (err, dbres) => {
+	Article.find({}, (err, queryres) => {
 		if (err) {
 			res.send(err);
 		}
-		res.send(dbres);
+		res.render('index', { articles: queryres });	
+	})
+});
+
+app.get('/articles', (req, res) => {
+	Article.find({}, (err, queryres) => {
+		if (err) {
+			res.send(err);
+		}
+		queryres.forEach((i, arr) => {
+			console.log(i.title);
+		})
+		res.send(queryres);
 	})
 })
 

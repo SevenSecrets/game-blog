@@ -1,6 +1,7 @@
 html
 	head
-		title= title
+		title Index
 	body
-		h1= article.title
-		p= article.body
+		ul
+			each article in articles
+				li: a= article.title

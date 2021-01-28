@@ -39,9 +39,6 @@ app.get('/articles', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
-		queryres.forEach((i, arr) => {
-			console.log(i.title);
-		})
 		res.send(queryres);
 	})
 })

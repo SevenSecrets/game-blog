@@ -3,5 +3,5 @@ html
 		title Index
 	body
 		ul
-			each article in articles
-				li: a(href="/articles/" + article.id)= article.title
+			each article, key in articles
+				li(id= key): a(href="/articles/" + article.id)= article.title

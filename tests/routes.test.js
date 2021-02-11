@@ -3,7 +3,7 @@ const app = require('../app');
 
 describe("get requests", function() {
 
-	this.retries(5);
+	this.retries(5);		// server startup time means I have to retry
 
 	describe("index route", function() {
 		it("responds 200", function(done) {

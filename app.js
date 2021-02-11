@@ -43,6 +43,15 @@ app.get('/articles', (req, res) => {
 	});
 });
 
+app.get('/articles/:ArticleId', (req, res) => {
+	Article.findById(req.params.ArticleId, (err, article) => {
+		if (err) {
+			res.send(err);
+		}
+		res.send(article);
+	});
+});
+
 app.listen(port, () => {
 	console.log(`Listening at port ${port}`);
 });

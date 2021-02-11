@@ -4,4 +4,4 @@ html
 	body
 		ul
 			each article in articles
-				li: a= article.title
+				li: a(href="/articles/" + article.id)= article.title

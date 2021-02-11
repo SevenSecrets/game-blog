@@ -48,7 +48,7 @@ app.get('/articles/:ArticleId', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
-		res.send(article);
+		res.render('article', { article: article });
 	});
 });
 

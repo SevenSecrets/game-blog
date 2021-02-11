@@ -6,7 +6,7 @@ A place to put some of a writing about games, and something to get me back into 
 
 If you want to run this yourself for some reason:
 
-Run `npm install` then make sure everything is okay by running the tests with `npm test`.
+Run `npm install` then make sure everything is okay by running the cypress tests with `npx cypress open`.
  
 Start the server with `npm start`.
 

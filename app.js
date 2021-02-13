@@ -2,6 +2,7 @@ const express = require('express');
 const logger = require('morgan');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
+const path = require('path');
 const article = require('./models/article.js');
 
 dotenv.config();
@@ -23,6 +24,7 @@ const port = 3000;
 const db = mongoose.connection;
 
 app.set('view engine', 'pug');
+app.use(express.static(path.join(__dirname, "public")));
 app.use(logger('combined'));
 
 app.get('/', (req, res) => {

@@ -1,7 +1,25 @@
-html
+doctype html
+html(lang="")
 	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="stylesheets/style.css")
 		title Index
 	body
-		ul
-			each article, key in articles
-				li(id= key): a(href="/articles/" + article.id)= article.title
+
+		div(class='grid-container')
+			div(class='header')
+				h1 Placeholder Title Babey
+
+			div(class='left')
+
+			div(class='content')
+				ul
+					each article, key in articles
+						li(id= key): a(href="/articles/" + article.id)= article.title
+
+			div(class='right')
+
+			div(class='footer')
+				h4 footer placeholder
+

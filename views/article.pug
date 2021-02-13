@@ -1,7 +1,23 @@
-html
-	head 
+doctype html
+html(lang="")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		link(rel="stylesheet" type="text/css" href="../stylesheets/style.css")
 		title= article.title
-
 	body
-		h1= article.title 
-		p= article.body
+
+		div(class="grid-container")
+			div(class="header")
+				h1= article.title 
+				
+			div(class="left")
+
+			div(class="content")
+				div(class="article")
+					p= article.body
+
+			div(class="right")
+
+			div(class="footer")
+				h4 placeholder footer

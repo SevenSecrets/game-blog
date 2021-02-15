@@ -10,7 +10,9 @@ Run `npm install` then start the server with `npm start`.
 
 You can then run the cypress tests through the test runner with `npx cypress open`. Make sure the server is running before doing this (in a different terminal or window usually).
 
+Currently looks absolutely awful on purpose, while I use it as an excuse to experiment with some css.
+
 ##
 
 Built using Express, and Pug as a templating engine.
-Tests use Mocha, Chai, and chai-http.
+Tests use Cypress.

@@ -3,14 +3,14 @@
 }
 
 body {
-	background-color: #ebebeb;
+	background-color: #f9f8ff;
 	font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .header {
 	grid-area: header;
-	background-color: seagreen;
-	color: #ebebeb;
+	background-color: darkslategrey;
+	color: lightgrey;
 	padding: 20px;
 	padding-left: 5%;
 	text-align: left;
@@ -26,11 +26,13 @@ body {
 
 .left {
 	grid-area: left;
+	background-color: lightgrey;
+	margin: 2%;
 }
 
 .content {
 	grid-area: content;
-	color: seagreen;
+	color: darkslategrey;
 }
 
 .right {
@@ -39,8 +41,8 @@ body {
 
 .footer {
 	grid-area: footer;
-	background-color: seagreen;
-	color: #ebebeb;
+	background-color: darkslategrey;
+	color: lightgrey;
 	padding: 10px;
 	padding-right: 5%;
 	text-align: right;
@@ -53,11 +55,11 @@ ul {
 li {
 	margin: 1%;
 	padding: 0.5%;
-	background-color: saddlebrown;
+	background-color: lightgrey;
 }
 
 a {
-	color: #ebebeb;
+	color: darkslategrey;
 	text-decoration: none;
 	margin: 1%;
 }
@@ -65,6 +67,5 @@ a {
 .article {
 	margin: 3%;
 	padding: 0.5%;
-	background-color: saddlebrown;
-	color: #ebebeb;
+	color: #272727;
 }

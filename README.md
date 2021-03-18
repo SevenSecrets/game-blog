@@ -1,6 +1,6 @@
 # Game Blog
 
-A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays.
+A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays. Runs as an express server serving static files with the Pug templating engine.
 
 ## Running the site
 
@@ -12,7 +12,16 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 
 Currently looks absolutely awful on purpose, while I use it as an excuse to experiment with some css.
 
-##
+## Notes
 
-Built using Express, and Pug as a templating engine.
-Tests use Cypress.
+### Testing
+
+I originally started building the tests for this using Mocha and Supertest, but decided/realised that proper end-to-end testing was needed, and that Cypress would be a better solution. There are still some remnants of Mocha/Supertest in the repo which I need to clean up (package.json etc) and that's why.
+
+### Database etc.
+
+I've decided to store all data (at the moment, just articles, but that may change) in a Mongo cloud database. This is more for practice using a cloud database and pulling data off it than because I think that is the optimum way to structure a blog, as this is more intended as development practice for me than anything else. This means that I'm using Mongoose (far easier to setup and use than MongoDB's own solution) as my solution for database modelling, querying, etc. At some point down the line this will all mean that I may have to work out some changes to the schema in order to allow proper templating for article pages.
+
+### Styling
+
+Styling is a mess for now, as I am partially using this project as an excuse to mess around with learning some basic design principles, a big hole in my knowledge which I want to patch up. Excuse some of the pages looking like a geocities site that magically got access to modern dev tools.

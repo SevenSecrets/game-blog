@@ -4,7 +4,6 @@
   "description": "A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays.",
   "main": "app.js",
   "scripts": {
-    "test": "mocha tests/*.test.js --exit",
     "start": "nodemon app.js"
   },
   "repository": {

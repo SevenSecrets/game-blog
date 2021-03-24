@@ -10,8 +10,6 @@ Run `npm install` then start the server with `npm start`.
 
 You can then run the cypress tests through the test runner with `npx cypress open`. Make sure the server is running before doing this (in a different terminal or window usually).
 
-Currently looks absolutely awful on purpose, while I use it as an excuse to experiment with some css.
-
 ## Notes
 
 ### Testing
@@ -25,3 +23,5 @@ I've decided to store all data (at the moment, just articles, but that may chang
 ### Styling
 
 Styling is a mess for now, as I am partially using this project as an excuse to mess around with learning some basic design principles, a big hole in my knowledge which I want to patch up. Excuse some of the pages looking like a geocities site that magically got access to modern dev tools.
+
+Also being used as a way to learn about using the Pug template engine, because it looked cool.

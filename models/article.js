@@ -4,14 +4,8 @@ const Schema = mongoose.Schema;
 
 const article = new Schema({
 	title: String,
+	sections: [{ type: Schema.Types.ObjectId, ref: 'Section' }],
 	date: Date
 });
 
-article.virtual('sections', {
-	ref: 'section',
-	localField: '_id',
-	foreignField: 'articleId',
-	justOne: false
-})
-
-module.exports = mongoose.model('article', article);
+module.exports = mongoose.model('Article', article);

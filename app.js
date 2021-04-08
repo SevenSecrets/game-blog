@@ -18,7 +18,7 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONG
 	console.log("Failed to connect to DB:", err);
 });
 
-const Article = mongoose.model('Article', article);
+const Article = article;
 const app = express();
 const port = process.env.PORT || 3000;
 const db = mongoose.connection;
@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
+		console.log(queryres)
 		res.render('index', { articles: queryres });	
 	});
 });

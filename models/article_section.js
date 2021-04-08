@@ -3,12 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const section = new Schema({
-	articleId: {
-		type: Schema.Types.ObjectId,
-		required: true
-	},
+	article: { type: Schema.Types.ObjectId, ref: 'Article'},
 	heading: String,
 	body: String
 });
 
-module.exports = mongoose.model('section', section);
+module.exports = mongoose.model('Section', section);

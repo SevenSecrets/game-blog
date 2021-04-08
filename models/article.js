@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
 const article = new Schema({
 	title: String,
-	body: String,
 	date: Date
 });
 
-module.exports = article;
+article.virtual('sections', {
+	ref: 'section',
+	localField: '_id',
+	foreignField: 'articleId',
+	justOne: false
+})
+
+module.exports = mongoose.model('article', article);

@@ -14,6 +14,11 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 
 ## Notes
 
+### Currently working on
+
+- Having built-in sections for the articles which are actually separate in the DB
+- Making said sections individually selectable (for ease of use/clarity in reading)
+
 ### Testing
 
 I originally started building the tests for this using Mocha and Supertest, but decided/realised that proper end-to-end testing was needed, and that Cypress would be a better solution. There are still some remnants of Mocha/Supertest in the repo which I need to clean up (package.json etc) and that's why.

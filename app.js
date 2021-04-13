@@ -32,7 +32,6 @@ app.get('/', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
-		console.log(queryres)
 		res.render('index', { articles: queryres });	
 	});
 });

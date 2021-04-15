@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const path = require('path');
 const article = require('./models/article.js');
+const section = require('./models/article_section');
+const SectionsHelpers = require('./helpers/sections_helpers');
 
 dotenv.config();
 
@@ -19,6 +21,7 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONG
 });
 
 const Article = article;
+const Section = section;
 const app = express();
 const port = process.env.PORT || 3000;
 const db = mongoose.connection;
@@ -50,7 +53,15 @@ app.get('/articles/:ArticleId', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
-		res.render('article', { article: article });
+		let sectionids = article.sections;
+		let sections = SectionsHelpers.getArticleSections(sectionids);
+		Promise.all(sections)
+		.then((values) => {
+			res.render('article', { article: article, sections: sections });
+		})
+		.catch(err => {
+			console.log(err);
+		});
 	});
 });
 

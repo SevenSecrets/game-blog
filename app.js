@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const article = require('./models/article.js');
 const section = require('./models/article_section');
+const SectionsHelpers = require('./helpers/sections_helpers');
 
 dotenv.config();
 
@@ -53,16 +54,14 @@ app.get('/articles/:ArticleId', (req, res) => {
 			res.send(err);
 		}
 		let sectionids = article.sections;
-		let sections = sectionids.map(sectionid => {
-			Section.findById(sectionid, (err, section) => {
-				if (err) {
-					res.send(err);
-				}
-				return section;
-			});
+		let sections = SectionsHelpers.getArticleSections(sectionids);
+		Promise.all(sections)
+		.then((values) => {
+			res.render('article', { article: article, sections: sections });
+		})
+		.catch(err => {
+			console.log(err);
 		});
-		console.log(sections)
-		res.render('article', { article: article, sections: sections });
 	});
 });
 

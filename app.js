@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const path = require('path');
 const article = require('./models/article.js');
+const section = require('./models/article_section');
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ mongoose.connect(`mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONG
 });
 
 const Article = article;
+const Section = section;
 const app = express();
 const port = process.env.PORT || 3000;
 const db = mongoose.connection;
@@ -50,7 +52,17 @@ app.get('/articles/:ArticleId', (req, res) => {
 		if (err) {
 			res.send(err);
 		}
-		res.render('article', { article: article });
+		let sectionids = article.sections;
+		let sections = sectionids.map(sectionid => {
+			Section.findById(sectionid, (err, section) => {
+				if (err) {
+					res.send(err);
+				}
+				return section;
+			});
+		});
+		console.log(sections)
+		res.render('article', { article: article, sections: sections });
 	});
 });
 

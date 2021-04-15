@@ -17,7 +17,7 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 ### Currently working on
 
 - Having built-in sections for the articles which are actually separate in the DB
-- Making said sections individually selectable (for ease of use/clarity in reading)
+- Making said sections individually selectable (ie table of contents)
 
 ### Testing
 

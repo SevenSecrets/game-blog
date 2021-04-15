@@ -4,7 +4,7 @@
   "description": "A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -e js,pug,json app.js"
+    "start": "nodemon -e js,pug,json,css app.js"
   },
   "repository": {
     "type": "git",

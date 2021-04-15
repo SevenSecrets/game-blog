@@ -33,10 +33,13 @@ body {
 .content {
 	grid-area: content;
 	color: darkslategrey;
+	max-width: 75%;
 }
 
 .right {
 	grid-area: right;
+	background-color: lightgrey;
+	margin: 2%;
 }
 
 .footer {
@@ -58,13 +61,18 @@ li {
 	background-color: lightgrey;
 }
 
-a {
+.index-link {
 	color: darkslategrey;
 	text-decoration: none;
 	margin: 1%;
 }
 
-.article {
+.footer-link {
+	color: lightgrey;
+	text-decoration: none;
+}
+
+article {
 	margin: 3%;
 	padding: 0.5%;
 	color: #272727;

@@ -16,10 +16,10 @@ html(lang="")
 			div(class='content')
 				ul
 					each article, key in articles
-						li(id= key): a(href="/articles/" + article.id)= article.title
+						li(id= key): a(class='index-link' href="/articles/" + article.id)= article.title
 
 			div(class='right')
 
 			div(class='footer')
-				h4 footer placeholder
+				h4: a(class="footer-link" href="/") I Just Have Thoughts About Games 2021
 

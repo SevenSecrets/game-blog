@@ -16,7 +16,7 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 
 ### Currently working on
 
-- Fixing the grid so the article doesn't outweigh the left and right columns
+- Fixing the grid so the article doesn't remove the left and right columns
 - Making said sections individually selectable (ie table of contents)
 
 ### Testing

@@ -57,7 +57,7 @@ app.get('/articles/:ArticleId', (req, res) => {
 		let sections = SectionsHelpers.getArticleSections(sectionids);
 		Promise.all(sections)
 		.then((values) => {
-			res.render('article', { article: article, sections: sections });
+			res.render('article', { article: article, sections: values });
 		})
 		.catch(err => {
 			console.log(err);

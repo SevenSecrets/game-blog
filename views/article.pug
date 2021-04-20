@@ -9,15 +9,17 @@ html(lang="")
 
 		div(class="grid-container")
 			div(class="header")
-				h1= article.title 
+				h1= article.title
 				
 			div(class="left")
 
 			div(class="content")
 				article(class="article")
-					p= article.sections
+					each section, i in sections 
+						h3= section.heading
+						p= section.body
 
 			div(class="right")
 
 			div(class="footer")
-				h4 placeholder footer
+				h4: a(class="footer-link" href="/") I Just Have Thoughts About Games 2021

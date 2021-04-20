@@ -14,10 +14,10 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 
 ## Notes
 
-### Currently working on
+### Currently working on/planning
 
-- Fixing the grid so the article doesn't remove the left and right columns
-- Making said sections individually selectable (ie table of contents)
+- Making article sections individually selectable (ie table of contents)
+- Adding article summary/short descriptions
 
 ### Testing
 

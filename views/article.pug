@@ -15,8 +15,16 @@ html(lang="")
 
 			div(class="content")
 				article(class="article")
-					each section, i in sections 
-						h3= section.heading
+
+					div(class="table-of-contents")
+						h3 Sections
+						each section, i in sections
+							a(class="section-link" href="#section" + i)= section.heading
+							br
+
+					each section, i in sections
+						div(class="section" id="section" + i)
+						h4= section.heading
 						p= section.body
 
 			div(class="right")

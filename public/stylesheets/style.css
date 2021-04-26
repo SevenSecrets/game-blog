@@ -59,15 +59,17 @@ li {
 	background-color: lightgrey;
 }
 
+a {
+	text-decoration: none;
+}
+
 .index-link {
 	color: darkslategrey;
-	text-decoration: none;
 	margin: 1%;
 }
 
 .footer-link {
 	color: lightgrey;
-	text-decoration: none;
 }
 
 article {

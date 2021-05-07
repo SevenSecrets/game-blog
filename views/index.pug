@@ -20,7 +20,10 @@ html(lang="")
 							- let month = article.date.getMonth() + 1
 							- let year = article.date.getFullYear()
 							- let datePosted = day + "/" + month + "/" + year
-							li(id= key): a(class='index-link' href="/articles/" + article.id) #{article.title} #{datePosted}
+							li(id= key) 
+								a(class='index-link' href="/articles/" + article.id) #{article.title}
+								span(class="date-posted") #{datePosted}
+								p(class="short-desc") placeholder for short desc
 							
 
 			div(class='right')

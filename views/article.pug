@@ -9,12 +9,17 @@ html(lang="")
 
 		div(class="grid-container")
 			div(class="header")
-				h1= article.title
+				h1 #{article.title}
 				
 			div(class="left")
 
 			div(class="content")
+
 				article(class="article")
+					- let day = article.date.getDate()
+					- let month = article.date.getMonth() + 1
+					- let year = article.date.getFullYear()
+					- let datePosted = day + "/" + month + "/" + year
 
 					div(class="table-of-contents")
 						h3 Sections

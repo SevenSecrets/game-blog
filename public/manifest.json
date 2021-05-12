@@ -2,5 +2,6 @@
     "name": "Freddie/Art's Game Blog",
     "short-name": "Game Blog",
     "description": "A game blog for all of my overflowing thoughts about games, particularly GSGs and narrative games.",
+    "start_url": ".",
     "background_color": "#f9f8ff"
 }

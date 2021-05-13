@@ -24,7 +24,7 @@ html(lang="")
 							li(id= key) 
 								a(class='index-link' href="/articles/" + article.id) #{article.title}
 								span(class="date-posted") #{datePosted}
-								p(class="short-desc") placeholder for short desc
+								p(class="short-desc") #{article.description}
 							
 
 			div(class='right')

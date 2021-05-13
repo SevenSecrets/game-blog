@@ -57,14 +57,19 @@ li {
 	margin: 1%;
 	padding: 0.5%;
 	background-color: lightgrey;
+	border: 2px solid darkslategrey;
 }
 
 a {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .date-posted {
 	text-align: right;
+	margin: 1%;
+}
+
+.short-desc {
 	margin: 1%;
 }
 

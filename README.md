@@ -16,11 +16,10 @@ You can then run the cypress tests through the test runner with `npx cypress ope
 
 ### Currently working on/planning
 
-- Adding article summary/short descriptions
 - The first placeholder article is an article I'm actually working on right now, which is why it's unfinished
 - Dates/Date posted/etc being added
 	- potentially sorting the articles on the homepage by date posted etc.
-- Continued styling changes
+- Continued styling changes (ongoing)
 
 ### Testing
 

@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - 14.17.0
+
+addons:
+  apt:
+    - libgconf-2-4
+
+cache:
+  - ~/.npm
+  - ~/.cache
+
+script:
+  - npm run start:ci &
+  - npm run cy:run
+  - kill $(jobs -p) || true

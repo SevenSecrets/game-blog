@@ -1,8 +1,9 @@
 doctype html
-html(lang="")
+html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1")
+		meta(name="description", content="Article Page, template.")
 		link(rel="stylesheet" type="text/css" href="../stylesheets/style.css")
 		link(rel="manifest" href="/manifest.json" crossorigin="use-credentials")
 		title= article.title
@@ -24,7 +25,7 @@ html(lang="")
 				article(class="article")
 
 					div(class="table-of-contents")
-						h3 Sections
+						h2 Sections
 						each section, i in sections
 							a(class="section-link" href="#section" + i) #{section.heading}
 							br
@@ -32,7 +33,7 @@ html(lang="")
 					div(class="article-body")
 						each section, i in sections
 							div(class="section" id="section" + i)
-							h4 #{section.heading}
+							h3 #{section.heading}
 							p #{section.body}
 						p(class="date-posted"): em posted: #{datePosted}
 

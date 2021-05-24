@@ -4,7 +4,7 @@
 
 ---
 
-A place to put some of a writing about games, and something to get me back into building javascript projects after the holidays. Runs as an express server serving static files with the Pug templating engine.
+A place to put some of my writing about games, and something to get me back into building javascript projects after the holidays. Runs as an express server serving static files with the Pug templating engine.
 
 Hosted [here](https://game-blog-1312.herokuapp.com/) for now.
 
